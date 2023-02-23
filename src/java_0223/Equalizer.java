@@ -25,9 +25,7 @@ public class Equalizer {
     private static void eq() {
         int db = rnd.nextInt(3, 8);
         boolean boo = false;
-        eq(db);
         eq(db, boo);
-        eq(boo);
 
     }
 
@@ -46,6 +44,8 @@ public class Equalizer {
         }
         if (boo) {
             System.out.println("\u001B[0m(" + db + ")");
+        } else{
+            System.out.println(" ");
         }
     }
 
