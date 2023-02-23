@@ -3,7 +3,8 @@ package java_0223;
 public class Java_0223 {
 
     public static void main(String[] args) {
-
+        kiiras("Az első 10 szám összege: " + elso10SzamOsszege());
+        kiiras("A két szám összege =" + osszead(1, 2));        
     }
 
     private static int elso10SzamOsszege() {
@@ -15,15 +16,13 @@ public class Java_0223 {
 
     }
 
-    private static void kiiras(osszeg) {
-        System.out.println("az első 10 szám összege: " + osszeg);
+    private static void kiiras(String szoveg) {
+        System.out.println(szoveg);
+
+    
     }
 
-    private static void osszead(int a, int b) {
-        int c = a + b;
-    }
-
-    private static void formazottkiir(int a, int b, int c) {
-        System.out.printf("%d + %d = %d\n", a, b, c);
+    private static int osszead(int a, int b) {
+        return a + b;
     }
 }
