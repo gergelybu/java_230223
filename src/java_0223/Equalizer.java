@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Equalizer {
 
-    private static Random rnd = new Random();
+    private static final Random rnd = new Random();
 
     public static void main(String[] args) {
         eq();
@@ -32,10 +32,12 @@ public class Equalizer {
     }
 
     private static void eq(int db) {
-        for (int i = 0; i < db; i++) {
+        boolean boo = false;
+        eq(db, boo);
+        /*for (int i = 0; i < db; i++) {
             System.out.print("\u001B[45m" + " ");
         }
-        System.out.println("");
+        System.out.println("");*/
     }
 
     private static void eq(int db, boolean boo) {
@@ -43,17 +45,18 @@ public class Equalizer {
             System.out.print("\u001B[45m" + " ");
         }
         if (boo) {
-            System.out.println("\u001B[40m(" + db + ")");
+            System.out.println("\u001B[0m(" + db + ")");
         }
     }
 
     private static void eq(boolean boo) {
         int db = rnd.nextInt(3, 8);
-        for (int i = 0; i < db; i++) {
+        eq(db, boo);
+        /*for (int i = 0; i < db; i++) {
             System.out.print("\u001B[45m" + " ");
         }
         if (boo) {
-            System.out.println("\u001B[40m(" + 4 + ")");
-        }
+            System.out.println("\u001B[0m(" + 4 + ")");
+        }*/
     }
 }
