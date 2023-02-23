@@ -7,24 +7,53 @@ public class Equalizer {
     private static Random rnd = new Random();
 
     public static void main(String[] args) {
-        ciklus();
+        eq();
+        eq(8, true);
+        eq(12);
+        eq(true);
+        eq();
 
     }
 
-    private static void ciklus() {
+    /* private static void ciklus() {
         int i = 0;
         while (i < 5) {
             eq();
             i += 1;
         }
-    }
-
+    }*/
     private static void eq() {
         int db = rnd.nextInt(3, 8);
+        boolean boo = false;
+        eq(db);
+        eq(db, boo);
+        eq(boo);
+
+    }
+
+    private static void eq(int db) {
         for (int i = 0; i < db; i++) {
             System.out.print("\u001B[45m" + " ");
         }
         System.out.println("");
+    }
 
+    private static void eq(int db, boolean boo) {
+        for (int i = 0; i < db; i++) {
+            System.out.print("\u001B[45m" + " ");
+        }
+        if (boo) {
+            System.out.println("\u001B[40m(" + db + ")");
+        }
+    }
+
+    private static void eq(boolean boo) {
+        int db = rnd.nextInt(3, 8);
+        for (int i = 0; i < db; i++) {
+            System.out.print("\u001B[45m" + " ");
+        }
+        if (boo) {
+            System.out.println("\u001B[40m(" + 4 + ")");
+        }
     }
 }
