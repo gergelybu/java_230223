@@ -3,8 +3,11 @@ package java_0223;
 public class Java_0223 {
 
     public static void main(String[] args) {
-        kiiras("Az első 10 szám összege: " + elso10SzamOsszege());
-        kiiras("A két szám összege =" + osszead(1, 2));        
+        kiiras("Az els? 10 sz�m �sszege: " + elso10SzamOsszege());
+        int szam1 = 1;
+        int szam2 = 2;
+        int osszeg = osszead(szam1, szam2);
+        kiiras("%d + %d = %d".formatted(szam1, szam2, osszeg));        
     }
 
     private static int elso10SzamOsszege() {
