@@ -36,6 +36,7 @@ public class QrCode {
             }
             System.out.println("");
         }
+        System.out.println("");
 
     }
 
